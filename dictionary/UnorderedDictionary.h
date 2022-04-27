@@ -42,6 +42,19 @@ public:
         table[hashValue].push_back(std::make_pair(key, value));
     }
 
+    void remove(const Key &key) {
+        size_t hashValue = getHash(key);
+
+        for (size_t i = 0; i < table[hashValue].size(); i++) {
+            if (table[hashValue][i].first == key) {
+                table[hashValue].erase(table[hashValue].begin() + i);
+                return;
+            }
+        }
+
+        throw key_not_found_exception<Key>();
+    }
+
     bool is_set(const Key &key) const {
         try {
             get(key);
