@@ -1,6 +1,6 @@
 # Dictionary Implementation
 
-## Интерфейс словря (Dictioary)
+## Интерфейс словаря (Dictionary)
 Абстрактные методы ```get(const Key &key)```, ```set(const Key &key, const Value &value)```, ```is_set(const Key &key)```
 
 ## Неупорядоченный словарь (Unordered Dictionary)
